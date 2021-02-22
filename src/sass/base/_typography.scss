@@ -1,0 +1,88 @@
+// -------------------------------
+//     TYPOGRAPHY VARIABLES
+// -------------------------------
+
+    // *--------- TYPOGRAPHY ---------*
+
+    $base__font-family: 'Poppins', sans-serif; // 300, 400, 500, 600, 700
+    $second__font-family: 'Open Sans', sans-serif; //
+    $third__font-family: 'Agency FB', sans-serif; // 400
+
+    @import 'https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@300;400;500;600;700&display=swap';
+
+    @font-face {
+        src: url("../components/fonts/agency_fb.ttf");
+        font-family: $third__font-family;
+    }
+
+    $font-size: 1.6rem;
+    $font-size--small: 0.75em;
+    $font-size--large: 2rem;
+    $font-size--x-large: 3.6rem;
+    $font-weight: 400;
+    $font-weight--light: 300;
+    $font-weight--medium: 500;
+    $font-weight--semi-bold: 600;
+    $font-weight--bold: 700;
+
+
+    $heading__font-size--large: 3.6rem;
+    $heading__font-size--x-large: 4.8rem;
+
+    $link__font-size: 1.8rem;
+
+// -------------------------------
+//     TYPOGRAPHY STYLES
+// -------------------------------
+
+    // *--------- GENERAL ---------*
+    html {
+        font-size: 62.5%;
+    }
+
+    body {
+        font: $font-weight #{$font-size}/1 $base__font-family;
+        color: $base__color;
+    }
+
+    strong {
+        font-weight: $font-weight--bold;
+    }
+
+    a {
+        @extend %transitionColor;
+    }
+
+    // *--------- HEADINGS ---------*
+    .heading {
+        font-family: $base__font-family;
+        font-weight: $font-weight--bold;
+
+        &--small {
+            font-size: $font-size--large;
+        }
+
+        &--large {
+            font-size: $heading__font-size--large;
+            font-weight: $font-weight--semi-bold;
+        }
+
+        &--x-large {
+            font-size: $heading__font-size--x-large;
+        }
+    }
+
+    // *--------- TEXT ---------*
+    .content {
+        section {
+            padding: 5rem 0;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            margin-bottom: 2rem;
+        }
+
+        img {
+            max-width: 100%;
+        }
+    }

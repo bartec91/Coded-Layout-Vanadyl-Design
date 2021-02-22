@@ -1,0 +1,91 @@
+// -------------------------------
+//     HEADER VARIABLES
+// -------------------------------
+
+    // *--------- TYPOGRAPHY ---------*
+
+    // *--------- COLORS ---------*
+    $header__background-color: rgba(64, 68, 230, 0.85);
+
+// ----------------------------
+//     HEADER STYLES
+// ----------------------------
+
+.header {
+    position: relative;
+
+    font-size: $font-size;
+    color: $base__color;
+
+    &__top {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    &__logo {
+        margin-right: auto;
+    }
+
+    &__search {
+
+        &-trigger {
+            padding: 3rem 0;
+            border: none;
+            background: none;
+            color: $base__color;
+
+            border-bottom: .3rem solid transparent;
+            @extend %transitionAll;
+
+            &--active,
+            &:hover {
+                color: $base__color--active;
+                border-bottom-color: $second__color;
+            }
+
+            i {
+                font-size: $font-size;
+                font-weight: $font-weight--bold;
+            }
+        }
+
+        &-input {
+            display: none;
+        }
+    }
+
+    &__main {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        &-wrapper {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            flex-basis: 100%;
+            padding: 15rem 0 20rem;
+
+            background: $header__background-color url('../img/slide-1.png') no-repeat;
+            background-size: cover;
+            background-blend-mode: overlay;
+            z-index: 1;
+            font-size: $font-size--large;
+            text-align: center;
+            color: #fff;
+        }
+    }
+
+            &__main-img {
+                margin-top: -5rem;
+                z-index: 1;
+            }
+
+    &__heading {
+        flex-basis: 100%;
+        margin-bottom: 5rem;
+    }
+}

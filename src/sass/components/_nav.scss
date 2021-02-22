@@ -1,0 +1,104 @@
+// -------------------------------
+//     NAV VARIABLES
+// -------------------------------
+
+    // *--------- TYPOGRAPHY ---------*
+
+    // *--------- COLORS ---------*
+
+// ----------------------------
+//     NAV STYLES
+// ----------------------------
+
+.nav {
+    display: flex;
+    align-content: center;
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+
+        text-align: center;
+    }
+
+        &__item {
+            display: flex;
+            margin: 0 20px;
+            position: relative;
+
+            list-style: none;
+
+            &--first {
+                margin-left: 0;
+            }
+        }
+
+            &__link {
+                padding: 30px 5px;
+                font-size: $font-size;
+
+                border-bottom: 3px solid transparent;
+                @extend %transitionAll;
+
+                &--active,
+                &:hover {
+                    color: $base__color--active;
+                    border-bottom-color: $second__color;
+                }
+            }
+
+            .submenu, .sub-level-submenu {
+                visibility: hidden;
+                opacity: 0;
+                z-index: 5;
+                @extend %transitionSubmenu;
+
+                min-width: 30rem;
+                position: absolute;
+                right: 0;
+                top: 100%;
+
+                background-color: $base__color;
+            }
+
+            &__item:hover .submenu, .submenu__item:hover .sub-level-submenu {
+                visibility: visible;
+                opacity: 1;
+            }
+
+                    .submenu__link, .sub-level-submenu__link {
+                        display: flex;
+                        justify-content: space-between;
+                        padding: 1.5rem 5rem 1.5rem 2.5rem;
+
+                        text-align: left;
+                        text-decoration: none;
+                        white-space: nowrap;
+                        color: #fff;
+                        @extend %transitionAll;
+
+                        &--first {
+                            padding-top: 3rem;
+                        }
+
+                        &:hover {
+                            color: $second__color;
+                            transform: translateX(3.5rem);
+                        }
+
+                        i {
+                            opacity: 0;
+                            color: #fff;
+                            @extend %transitionAll;
+                        }
+
+                        &:hover i {
+                            opacity: 1;
+                        }
+                    }
+
+                    .sub-level-submenu {
+                        top: 0;
+                        left: 100%;
+                    }
+}

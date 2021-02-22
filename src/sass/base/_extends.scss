@@ -1,0 +1,19 @@
+// ---------------------
+//     EXTENDS
+// ---------------------
+
+%clearfix {
+    @include clearfix;
+}
+
+%transitionColor {
+    @include transition($props: color);
+}
+
+%transitionSubmenu {
+    @include transition(opacity, 0.5s);
+}
+
+%transitionAll {
+    @include transition;
+}

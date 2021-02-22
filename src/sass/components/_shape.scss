@@ -1,0 +1,23 @@
+// -------------------------------
+//     SHAPE VARIABLES
+// -------------------------------
+
+    // *--------- TYPOGRAPHY ---------*
+    $shape-icon__font-size: 4rem;
+    $shape-testimonial-play-btn__font-size: 8rem;
+
+    // *--------- COLORS ---------*
+
+// -------------------------------
+//     SHAPE STYLES
+// -------------------------------
+
+
+
+.shape {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: $shape-icon__font-size;
+    color: $second__color;
+}
